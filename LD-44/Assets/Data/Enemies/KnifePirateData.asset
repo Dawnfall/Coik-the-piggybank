@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaed9b35a9b0b6f4789399ffc04c584a, type: 3}
+  m_Name: KnifePirateData
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 3306875549677149455, guid: 97910b98f1037a34591949faeb02f260,
+    type: 3}
+  Start_HP: 30
+  Dmg: 0
+  Attack_Cd: 0.5
+  Move_Speed: 5
+  Attack_Distance: 8
+  Money_Reward: 4

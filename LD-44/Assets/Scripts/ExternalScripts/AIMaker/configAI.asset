@@ -1,0 +1,488 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1936075c6b41c384cb0a25192900c136, type: 3}
+  m_Name: configAI
+  m_EditorClassIdentifier: 
+  m_skin: {fileID: 11400000, guid: b06a671124bd1984a9d192b249619e77, type: 2}
+  m_backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_showHUD: 1
+  m_hudWidth: 250
+  m_showBB: 1
+  m_bbWidth: 600
+  m_bbHeight: 600
+  m_minZoom: 0.2
+  m_maxZoom: 3
+  m_zoomSpeed: 0.1
+  btNodeSize: {x: 120, y: 140}
+  fsmStateNodeSize: {x: 150, y: 150}
+  imageSize: {x: 30, y: 30}
+  rootImageSize: {x: 30, y: 30}
+  connectionPointSize: {x: 10, y: 10}
+  breakPointSize: {x: 15, y: 15}
+  addRemovePointButtonSize: {x: 15, y: 15}
+  mainOptionsPanelSize: {x: 250, y: 75}
+  graphOptionsPanelSize: {x: 250, y: 150}
+  blackboardPanelSize: {x: 250, y: 300}
+  panelPadding: 20
+  nodeBackgroundImage: node_Panel.png
+  connectionPointImage: connectionPoint.png
+  breakPointImage: breakPointImage.png
+  nodeSelectedImage: selectedNode_Panel.png
+  nodeBTFailureImage: failureStatus_Panel.png
+  nodeBTSuccessImage: successStatus_Panel.png
+  nodeBTRunningImage: runningStatus_Panel.png
+  testPanelSize: {x: 250, y: 100}
+  m_serRegisterdTypes:
+  - m_type: aim.AIAgent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: aim.AIAgent
+  - m_type: aim.GlobalBlackboard, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: aim.GlobalBlackboard
+  - m_type: CameraController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: CameraController
+  - m_type: LifeComponent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: LifeComponent
+  - m_type: PlayerController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: PlayerController
+  - m_type: SoldierController, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: SoldierController
+  - m_type: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    m_isUsed: 1
+    m_info: 
+    m_createPath: System.Boolean
+  - m_type: System.Double, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    m_isUsed: 1
+    m_info: 
+    m_createPath: System.Double
+  - m_type: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    m_isUsed: 1
+    m_info: 
+    m_createPath: System.Int32
+  - m_type: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    m_isUsed: 1
+    m_info: 
+    m_createPath: System.Single
+  - m_type: System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+    m_isUsed: 0
+    m_info: 
+    m_createPath: System.String
+  - m_type: UnitComponent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnitComponent
+  - m_type: UnityEditor.NetworkScenePostProcess, UnityEditor.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEditor.NetworkScenePostProcess
+  - m_type: UnityEngine.Analytics.AnalyticsEventTracker, UnityEngine.Analytics, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Analytics.AnalyticsEventTracker
+  - m_type: UnityEngine.Analytics.AnalyticsTracker, UnityEngine.Analytics, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Analytics.AnalyticsTracker
+  - m_type: UnityEngine.Audio.AudioSpatializerMicrosoft, UnityEngine.HoloLens, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Audio.AudioSpatializerMicrosoft
+  - m_type: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.Color
+  - m_type: UnityEngine.EventSystems.BaseInput, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.BaseInput
+  - m_type: UnityEngine.EventSystems.BaseInputModule, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.BaseInputModule
+  - m_type: UnityEngine.EventSystems.BaseRaycaster, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.BaseRaycaster
+  - m_type: UnityEngine.EventSystems.EventSystem, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.EventSystem
+  - m_type: UnityEngine.EventSystems.EventTrigger, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.EventTrigger
+  - m_type: UnityEngine.EventSystems.HoloLensInput, UnityEngine.HoloLens, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.HoloLensInput
+  - m_type: UnityEngine.EventSystems.HoloLensInputModule, UnityEngine.HoloLens, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.HoloLensInputModule
+  - m_type: UnityEngine.EventSystems.Physics2DRaycaster, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.Physics2DRaycaster
+  - m_type: UnityEngine.EventSystems.PhysicsRaycaster, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.PhysicsRaycaster
+  - m_type: UnityEngine.EventSystems.PointerInputModule, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.PointerInputModule
+  - m_type: UnityEngine.EventSystems.StandaloneInputModule, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.StandaloneInputModule
+  - m_type: UnityEngine.EventSystems.TouchInputModule, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.TouchInputModule
+  - m_type: UnityEngine.EventSystems.UIBehaviour, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.EventSystems.UIBehaviour
+  - m_type: UnityEngine.Experimental.Audio.Google.GvrAudioRoom, UnityEngine.GoogleAudioSpatializer,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+  - m_type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.GameObject
+  - m_type: UnityEngine.MonoBehaviour, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.MonoBehaviour
+  - m_type: UnityEngine.Networking.Match.NetworkMatch, UnityEngine.UNETModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.Match.NetworkMatch
+  - m_type: UnityEngine.Networking.NetworkAnimator, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkAnimator
+  - m_type: UnityEngine.Networking.NetworkBehaviour, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkBehaviour
+  - m_type: UnityEngine.Networking.NetworkDiscovery, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkDiscovery
+  - m_type: UnityEngine.Networking.NetworkIdentity, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkIdentity
+  - m_type: UnityEngine.Networking.NetworkLobbyManager, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkLobbyManager
+  - m_type: UnityEngine.Networking.NetworkLobbyPlayer, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkLobbyPlayer
+  - m_type: UnityEngine.Networking.NetworkManager, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkManager
+  - m_type: UnityEngine.Networking.NetworkManagerHUD, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkManagerHUD
+  - m_type: UnityEngine.Networking.NetworkMigrationManager, UnityEngine.Networking,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkMigrationManager
+  - m_type: UnityEngine.Networking.NetworkProximityChecker, UnityEngine.Networking,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkProximityChecker
+  - m_type: UnityEngine.Networking.NetworkStartPosition, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkStartPosition
+  - m_type: UnityEngine.Networking.NetworkTransform, UnityEngine.Networking, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkTransform
+  - m_type: UnityEngine.Networking.NetworkTransformChild, UnityEngine.Networking,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkTransformChild
+  - m_type: UnityEngine.Networking.NetworkTransformVisualizer, UnityEngine.Networking,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.Networking.NetworkTransformVisualizer
+  - m_type: UnityEngine.Quaternion, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.Quaternion
+  - m_type: UnityEngine.SpatialTracking.TrackedPoseDriver, UnityEngine.SpatialTracking,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.SpatialTracking.TrackedPoseDriver
+  - m_type: UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback, UnityEngine.TestRunner,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
+  - m_type: UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender, UnityEngine.TestRunner,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
+  - m_type: UnityEngine.TestTools.TestRunner.PlaymodeTestsController, UnityEngine.TestRunner,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.TestTools.TestRunner.PlaymodeTestsController
+  - m_type: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.Transform
+  - m_type: UnityEngine.UI.AspectRatioFitter, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.AspectRatioFitter
+  - m_type: UnityEngine.UI.BaseMeshEffect, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.BaseMeshEffect
+  - m_type: UnityEngine.UI.Button, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Button
+  - m_type: UnityEngine.UI.CanvasScaler, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.CanvasScaler
+  - m_type: UnityEngine.UI.ContentSizeFitter, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.ContentSizeFitter
+  - m_type: UnityEngine.UI.Dropdown, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Dropdown
+  - m_type: UnityEngine.UI.Dropdown+DropdownItem, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Dropdown+DropdownItem
+  - m_type: UnityEngine.UI.Graphic, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Graphic
+  - m_type: UnityEngine.UI.GraphicRaycaster, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.GraphicRaycaster
+  - m_type: UnityEngine.UI.GridLayoutGroup, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.GridLayoutGroup
+  - m_type: UnityEngine.UI.HorizontalLayoutGroup, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.HorizontalLayoutGroup
+  - m_type: UnityEngine.UI.HorizontalOrVerticalLayoutGroup, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.HorizontalOrVerticalLayoutGroup
+  - m_type: UnityEngine.UI.Image, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Image
+  - m_type: UnityEngine.UI.InputField, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.InputField
+  - m_type: UnityEngine.UI.LayoutElement, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.LayoutElement
+  - m_type: UnityEngine.UI.LayoutGroup, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.LayoutGroup
+  - m_type: UnityEngine.UI.Mask, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Mask
+  - m_type: UnityEngine.UI.MaskableGraphic, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.MaskableGraphic
+  - m_type: UnityEngine.UI.Outline, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Outline
+  - m_type: UnityEngine.UI.PositionAsUV1, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.PositionAsUV1
+  - m_type: UnityEngine.UI.RawImage, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.RawImage
+  - m_type: UnityEngine.UI.RectMask2D, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.RectMask2D
+  - m_type: UnityEngine.UI.Scrollbar, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Scrollbar
+  - m_type: UnityEngine.UI.ScrollRect, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.ScrollRect
+  - m_type: UnityEngine.UI.Selectable, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Selectable
+  - m_type: UnityEngine.UI.Shadow, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Shadow
+  - m_type: UnityEngine.UI.Slider, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Slider
+  - m_type: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Text
+  - m_type: UnityEngine.UI.Toggle, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.Toggle
+  - m_type: UnityEngine.UI.ToggleGroup, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.ToggleGroup
+  - m_type: UnityEngine.UI.VerticalLayoutGroup, UnityEngine.UI, Version=1.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.UI.VerticalLayoutGroup
+  - m_type: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.Vector2
+  - m_type: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.Vector3
+  - m_type: UnityEngine.Vector4, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_isUsed: 0
+    m_info: 
+    m_createPath: UnityEngine.Vector4
+  - m_type: UnityEngine.XR.WSA.SpatialMappingBase, UnityEngine.HoloLens, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.XR.WSA.SpatialMappingBase
+  - m_type: UnityEngine.XR.WSA.SpatialMappingCollider, UnityEngine.HoloLens, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.XR.WSA.SpatialMappingCollider
+  - m_type: UnityEngine.XR.WSA.SpatialMappingRenderer, UnityEngine.HoloLens, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_isUsed: 1
+    m_info: 
+    m_createPath: UnityEngine.XR.WSA.SpatialMappingRenderer
